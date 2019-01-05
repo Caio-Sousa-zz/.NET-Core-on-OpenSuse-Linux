@@ -36,7 +36,7 @@ To update individual packages, specify the package with either the update or ins
 When installing the SDK the following prompt might occur: nothing provides libcurl needed by dotnet-runtime choose the option to ignore and continue usually option 2.
 
 
-### Testing the .NET Core on linux
+### Testing the .NET Core Console Application
 After installing .NET Core SDK we will do a quick test to make sure it is running properly.
 
 Open the terminal type the following commands:
@@ -54,6 +54,24 @@ Running .NET console application
 ~$ dotnet run
 ```
 The text 'Hello World' should appear in the terminal and we know that .net is running correctly.
+
+## Running And Deploying ASP.NET Core Application
+We will now test a web application.
+
+Open the terminal type the following commands:
+
+Create a development folder:
+```
+~$ mkdir dev
+~$ cd dev
+~$ mkdir webApp
+~$ cd webApp
+```
+
+Create a web application in the webApp folder:
+
+
+
 
 
 ## References
