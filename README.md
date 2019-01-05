@@ -6,6 +6,8 @@ For this tutorial open suse Leap version 42.1 has been used.
 ## Installing .NET Core
 The first step is to install the packages necessary for running .NET core in linux distribution this tutorial can be seen in the .NET Core Installation link.
 
+#For Key registration, product repository and depencies run
+
 Open the terminal and run the following commands:
 
 ```
@@ -16,6 +18,7 @@ Open the terminal and run the following commands:
 ~$ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ```
 
+#Installing the .NET SDK:
 ```
 ~$ sudo zypper update
 ~$ sudo zypper install libunwind libicu
