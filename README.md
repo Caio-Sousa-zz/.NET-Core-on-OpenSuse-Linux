@@ -33,7 +33,29 @@ To update individual packages, specify the package with either the update or ins
 ~$ sudo zypper install dotnet-sdk-2.1.4
 ```
 
+When installing the SDK the following prompt might occur: nothing provides libcurl needed by dotnet-runtime choose the option to ignore and continue usually option 2.
+
+
+### Testing the .NET Core on linux
+After installing .NET Core SDK we will do a quick test to make sure it is running properly.
+
+Open the terminal type the following commands:
+
+Create a new test folder:
+```
+~$ mkdir testClient
+~$ cd testClient
+```
+
+Running .NET console application
+```
+~$ dotnet new console
+~$ dotnet restore
+~$ dotnet run
+```
+The text 'Hello World' should appear in the terminal and we know that .net is running correctly.
+
 
 ## References
 * [.NET Core Installation](https://dotnet.microsoft.com/download/linux-package-manager/opensuse/sdk-2.1.4) - Install .NET Core in Linux.
-* [Deploying .NET Core](https://www.youtube.com/watch?v=z5dnNthXwzE)- ASP.NET Core 1.0 Cross-Platform - Deploying to a Linux Server.
+* [Deploying .NET Core](https://www.youtube.com/watch?v=z5dnNthXwzE) - ASP.NET Core 1.0 Cross-Platform - Deploying to a Linux Server.
