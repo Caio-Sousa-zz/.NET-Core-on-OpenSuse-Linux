@@ -4,7 +4,7 @@ This guide provides a step by step on installing and configuring .NET core and r
 For this tutorial open suse Leap version 42.1 has been used.
 
 ## Installing .NET Core 2.1.4
-The first step is to install the packages necessary for running .NET core in linux distribution this tutorial.
+This section contains the first step to install the packages necessary for running .NET core in linux distribution this tutorial.
 
 ### For Key registration, product repository and depencies
 
@@ -56,7 +56,9 @@ Running .NET console application
 The text 'Hello World' should appear in the terminal and we know that .net is running correctly.
 
 ## Running And Deploying ASP.NET Core Application
-We will now test a web application.
+This section provides an example of a running asp.net core application the deployment process in the linux environment.
+
+### Testing a web application
 
 Open the terminal type the following commands:
 
