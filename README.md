@@ -58,7 +58,7 @@ The text 'Hello World' should appear in the terminal and we know that .net is ru
 ## Running And Deploying ASP.NET Core Application
 This section provides an example of a running asp.net core application the deployment process in the linux environment.
 
-### Creating a Web Application
+### Running a Web Application
 
 Open the terminal type the following commands:
 
@@ -76,7 +76,8 @@ Create a empty web application in the webApp folder:
 ~$ dotnet restore
 ~$ dotnet run
 ```
-The application should be listening on a port this port could be 5000
+
+### Hosting a Web Application
 
 
 ## References
