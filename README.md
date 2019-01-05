@@ -6,7 +6,7 @@ For this tutorial open suse Leap version 42.1 has been used.
 ## Installing .NET Core 2.1.4
 The first step is to install the packages necessary for running .NET core in linux distribution this tutorial.
 
-### For Key registration, product repository and depencies run
+### For Key registration, product repository and depencies
 
 Open the terminal and run the following commands:
 
