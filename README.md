@@ -3,7 +3,7 @@ This guide provides a step by step on installing and configuring .NET core and r
 
 For this tutorial open suse Leap version 42.1 has been used.
 
-## Installing .NET Core
+## Installing .NET Core 2.1.4
 The first step is to install the packages necessary for running .NET core in linux distribution this tutorial.
 
 ### For Key registration, product repository and depencies run
@@ -19,8 +19,16 @@ Open the terminal and run the following commands:
 ```
 
 ### Installing the .NET SDK:
+
+Open the terminal and run the following commands:
+
+Update all installed packages with newer available versions:
 ```
 ~$ sudo zypper update
+```
+
+To update individual packages, specify the package with either the update or install command:
+```
 ~$ sudo zypper install libunwind libicu
 ~$ sudo zypper install dotnet-sdk-2.1.4
 ```
