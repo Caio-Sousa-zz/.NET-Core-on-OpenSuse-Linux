@@ -76,6 +76,19 @@ Create a empty web application in the webApp folder:
 ~$ dotnet restore
 ~$ dotnet run
 ```
+### Installing Visual Studio Code
+A recommended code editor for .NET applications is VS Code.
+
+To install VS code run the following commands in the terminal:
+```
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/vscode.repo'
+```
+
+```
+sudo zypper refresh
+sudo zypper install code
+```
 
 ### Hosting a Web Application
 
