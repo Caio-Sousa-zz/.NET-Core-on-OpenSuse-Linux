@@ -18,8 +18,8 @@ Open the terminal and run the following commands:
 
 ```
 ~$ sudo zypper update
-~$sudo zypper install libunwind libicu
-~$sudo zypper install dotnet-sdk-2.1.4
+~$ sudo zypper install libunwind libicu
+~$ sudo zypper install dotnet-sdk-2.1.4
 ```
 
 
