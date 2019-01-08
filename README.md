@@ -123,6 +123,14 @@ To start and enable apache:
 ~$ systemctl enable apache2
 ```
 
+The apache folder should then be available at
+
+```
+~$ cd /srv/www/htdocs
+```
+
+
+
 ## References
 * [.NET Core Installation](https://dotnet.microsoft.com/download/linux-package-manager/opensuse/sdk-2.1.4) - Install .NET Core in Linux.
 * [Deploying .NET Core](https://www.youtube.com/watch?v=z5dnNthXwzE) - ASP.NET Core 1.0 Cross-Platform - Deploying to a Linux Server.
