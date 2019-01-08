@@ -108,9 +108,20 @@ Then to call this option on the Configure method include:
  app.UseForwardedHeaders();
 ```
 
-### Hosting a ASP.NET in Apache
+### Hosting a ASP.NET Core in Apache
 
+First we will install the apache server, open the terminal and type:
 
+```
+~$ zypper in apache2
+```
+
+To start and enable apache:
+
+```
+~$ systemctl start apache2
+~$ systemctl enable apache2
+```
 
 ## References
 * [.NET Core Installation](https://dotnet.microsoft.com/download/linux-package-manager/opensuse/sdk-2.1.4) - Install .NET Core in Linux.
