@@ -129,7 +129,7 @@ The apache folder should then be available at
 ~$ cd /srv/www/htdocs
 ```
 
-
+If we copy a index.html to the htdocs the file should be available in the browser on localhost
 
 ## References
 * [.NET Core Installation](https://dotnet.microsoft.com/download/linux-package-manager/opensuse/sdk-2.1.4) - Install .NET Core in Linux.
