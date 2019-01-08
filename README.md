@@ -90,9 +90,25 @@ sudo zypper refresh
 sudo zypper install code
 ```
 
-### Hosting a Web Application
+### Configuring the Web Application
+We will need to configure a reverse proxy for canceling the HTTP request and fowarding to the ASP.NET Application.
 
+Include the Startup.cs file update the ConfigureServices method to update the foward headers.
 
+```
+services.Configure<ForwardedHeadersOptions>(options =>
+    {
+        options.ForwardedHeaders = 
+            ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+    });
+```
+Then to call this option on the Configure method include:
+
+```
+ app.UseForwardedHeaders();
+```
+
+### Hosting a ASP.NET in Apache
 
 
 
