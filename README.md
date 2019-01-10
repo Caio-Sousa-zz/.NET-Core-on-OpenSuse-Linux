@@ -137,6 +137,38 @@ The apache folder should then be available at
 
 If we copy a index.html to the htdocs the file should be available in the browser on localhost
 
+
+### Creating a configuration file for the application
+
+Configuration files for Apache are located within the /etc/apache2 directory where the *.conf are located.
+
+First navigate to the configuration folder:
+```
+~$ cd /stc/apache2
+```
+
+Then, create a configuration file we will create on called webApp.conf
+```
+~$ touch webApp.conf
+
+
+<VirtualHost *:*>
+    RequestHeader set "X-Forwarded-Proto" expr=%{REQUEST_SCHEME}
+</VirtualHost>
+
+<VirtualHost *:80>
+    ProxyPreserveHost On
+    ProxyPass / http://127.0.0.1:5000/
+    ProxyPassReverse / http://127.0.0.1:5000/
+    ServerName www.example.com
+    ServerAlias *.example.com
+    ErrorLog ${APACHE_LOG_DIR}helloapp-error.log
+    CustomLog ${APACHE_LOG_DIR}helloapp-access.log common
+</VirtualHost>
+```
+
+Edit the file and
+
 ## References
 * [.NET Core Installation](https://dotnet.microsoft.com/download/linux-package-manager/opensuse/sdk-2.1.4) - Install .NET Core in Linux.
 * [Deploying .NET Core](https://www.youtube.com/watch?v=z5dnNthXwzE) - ASP.NET Core 1.0 Cross-Platform - Deploying to a Linux Server.
