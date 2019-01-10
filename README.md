@@ -76,6 +76,12 @@ Create a empty web application in the webApp folder:
 ~$ dotnet restore
 ~$ dotnet run
 ```
+
+For packing the app and its dependencies into a folder for deployment to a hosting system:
+```
+~$ dotnet publish
+```
+
 ### Installing Visual Studio Code
 A recommended code editor for .NET applications is VS Code.
 
