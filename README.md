@@ -194,7 +194,7 @@ Description=Example .NET Web App running on OpenSuse42.1
 
 [Service]
 WorkingDirectory=/dev/webApp
-ExecStart=/usr/local/bin/dotnet /dev/webApp/bin/Debug/netcore2.0/webApp.dll
+ExecStart=/usr/local/bin/dotnet /dev/webApp/bin/Debug/netcore2.0/publish/webApp.dll
 Restart=always
 # Restart service after 10 seconds if the dotnet service crashes:
 RestartSec=10
