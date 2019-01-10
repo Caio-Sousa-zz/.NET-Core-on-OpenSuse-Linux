@@ -147,10 +147,9 @@ First navigate to the configuration folder:
 ~$ cd /stc/apache2
 ```
 
-Then, create a configuration file we will create on called webApp.conf
+Then, create a configuration file we will create on called webApp.conf:
 ```
 ~$ touch webApp.conf
-
 
 <VirtualHost *:*>
     RequestHeader set "X-Forwarded-Proto" expr=%{REQUEST_SCHEME}
