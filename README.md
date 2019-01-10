@@ -207,8 +207,12 @@ Environment=ASPNETCORE_ENVIRONMENT=Production
 WantedBy=multi-user.target
 ```
 
-
-
+Enable and check the service:
+```
+~$ sudo systemctl enable kestrel-webApp.service
+~$ sudo systemctl start kestrel-helloapp.service
+~$ sudo systemctl status kestrel-helloapp.service
+```
 
 ## References
 * [.NET Core Installation](https://dotnet.microsoft.com/download/linux-package-manager/opensuse/sdk-2.1.4) - Install .NET Core in Linux.
