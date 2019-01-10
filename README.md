@@ -171,6 +171,45 @@ Run the configuration status check for apache:
 ~$ cd apchectl configtest
 ```
 
+
+Apache is configured to forward requests made to http://localhost:80 to 
+the ASP.NET Core app running on Kestrel at http://127.0.0.1:5000.
+
+However, Apache isn't set up to manage the Kestrel process. 
+Use systemd and create a service file to start and monitor the underlying web app. 
+systemd is an init system that provides many powerful features for starting, stopping, and managing processes.
+
+```
+~$ cd /etc/systemd/system/
+~$ touch kestrel-webApp.service
+```
+
+Open and edit the file with the following config:
+
+```
+~$ krwite kestrel-webApp.service
+
+[Unit]
+Description=Example .NET Web App running on OpenSuse42.1
+
+[Service]
+WorkingDirectory=/dev/webApp
+ExecStart=/usr/local/bin/dotnet /dev/webApp/bin/Debug/netcore2.0/webApp.dll
+Restart=always
+# Restart service after 10 seconds if the dotnet service crashes:
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=dotnet-example
+User=apache
+Environment=ASPNETCORE_ENVIRONMENT=Production 
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
+
+
 ## References
 * [.NET Core Installation](https://dotnet.microsoft.com/download/linux-package-manager/opensuse/sdk-2.1.4) - Install .NET Core in Linux.
 * [Deploying .NET Core](https://www.youtube.com/watch?v=z5dnNthXwzE) - ASP.NET Core 1.0 Cross-Platform - Deploying to a Linux Server.
