@@ -166,7 +166,10 @@ Then, create a configuration file we will create on called webApp.conf:
 </VirtualHost>
 ```
 
-Edit the file and
+Run the configuration status check for apache:
+```
+~$ cd apchectl configtest
+```
 
 ## References
 * [.NET Core Installation](https://dotnet.microsoft.com/download/linux-package-manager/opensuse/sdk-2.1.4) - Install .NET Core in Linux.
