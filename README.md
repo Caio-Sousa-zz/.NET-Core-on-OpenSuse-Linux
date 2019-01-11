@@ -144,7 +144,7 @@ Configuration files for Apache are located within the /etc/apache2 directory whe
 
 First navigate to the configuration folder:
 ```
-~$ cd /stc/apache2
+~$ cd /etc/apache2
 ```
 
 Then, create a configuration file we will create on called webApp.conf:
